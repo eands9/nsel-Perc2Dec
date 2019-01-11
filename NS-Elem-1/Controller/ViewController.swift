@@ -10,10 +10,9 @@ import UIKit
 import Speech
 
 class ViewController: UIViewController {
-    @IBOutlet weak var questionLbl: UILabel!
+
     @IBOutlet weak var answerTxt: UITextField!
     @IBOutlet weak var progressLbl: UILabel!
-    @IBOutlet weak var questionNumberLbl: UILabel!
     @IBOutlet weak var timerLbl: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -23,16 +22,13 @@ class ViewController: UIViewController {
     var timer = Timer()
     var counter = 0.0
     
-    var convertRoman = ""
-    var randomNumA : Int = 0
-    var randomNumB : Int = 0
-    var firstNum: Int = 0
-    var secondNum: Int = 0
-    var numA: Double = 0
-    var numB: Double = 0
+    var questions = QuestionList()
+    var lastQIndex = 0
+    var questionIndex = 0
+    
     var questionTxt : String = ""
-    var answerCorrect : Double = 0
-    var answerUser : Double = 0
+    var answerCorrect : String = ""
+    var answerUser : String = ""
     var isShow: Bool = false
     
     let congratulateArray = ["Great Job", "Excellent", "Way to go", "Alright", "Right on", "Correct", "Well done", "Awesome","Give me a high five"]
@@ -48,31 +44,30 @@ class ViewController: UIViewController {
         
         self.answerTxt.becomeFirstResponder()
     }
-
+    
+    func startOver(){
+        questions = QuestionList()
+        askQuestion()
+    }
+    func askQuestion() {
+        lastQIndex = questions.list.count - 1
+        questionIndex = Int.random(in: 0...lastQIndex)
+        questionLabel.text = "\(questions.list[questionIndex].percent)% = ___ (fraction)"
+        answerCorrect = questions.list[questionIndex].fraction
+        questions.list.remove(at: questionIndex)
+    }
     @IBAction func checkAnswerByUser(_ sender: Any) {
         checkAnswer()
     }
-    
-    func askQuestion(){
-        randomNumA = Int.random(in: 10000 ..< 1000000)
-        randomNumB = Int.random(in: 10 ..< 1000)
-        firstNum = randomNumA
-        secondNum = randomNumB
-        numA = Double(firstNum)
-        numB = Double(secondNum)
-        questionLabel.text = "\(firstNum) / \(secondNum)"
-        answerCorrect = numA / numB
-    }
-    
     @IBAction func showBtn(_ sender: Any) {
-        answerTxt.text = String(round(answerCorrect))
+        answerTxt.text = answerCorrect
         isShow = true
     }
     
     func checkAnswer(){
-        answerUser = (answerTxt.text! as NSString).doubleValue
+        answerUser = answerTxt.text!
         
-        if answerUser >= answerCorrect * 0.95 && answerUser <= answerCorrect * 1.05 && isShow == false {
+        if answerUser == answerCorrect && isShow == false {
             correctAnswers += 1
             numberAttempts += 1
             updateProgress()

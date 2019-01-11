@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D50B72421E8E439009821F7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50B72321E8E439009821F7 /* Question.swift */; };
+		6D50B72621E8E4D7009821F7 /* QuestionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50B72521E8E4D7009821F7 /* QuestionList.swift */; };
 		6D5D5F5E21B426E6007F5184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D5F5D21B426E6007F5184 /* AppDelegate.swift */; };
 		6D5D5F6021B426E6007F5184 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D5F5F21B426E6007F5184 /* ViewController.swift */; };
 		6D5D5F6321B426E6007F5184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D5F6121B426E6007F5184 /* Main.storyboard */; };
@@ -15,7 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D5D5F5A21B426E6007F5184 /* nsel-00000div000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nsel-00000div000.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D50B72321E8E439009821F7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6D50B72521E8E4D7009821F7 /* QuestionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
+		6D5D5F5A21B426E6007F5184 /* nsel-Perc2Dec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nsel-Perc2Dec.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5D5F5D21B426E6007F5184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D5D5F5F21B426E6007F5184 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D5D5F6221B426E6007F5184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D50B72221E8E39E009821F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D50B72321E8E439009821F7 /* Question.swift */,
+				6D50B72521E8E4D7009821F7 /* QuestionList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6D5D5F5121B426E6007F5184 = {
 			isa = PBXGroup;
 			children = (
@@ -46,7 +59,7 @@
 		6D5D5F5B21B426E6007F5184 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6D5D5F5A21B426E6007F5184 /* nsel-00000div000.app */,
+				6D5D5F5A21B426E6007F5184 /* nsel-Perc2Dec.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,7 +67,7 @@
 		6D5D5F5C21B426E6007F5184 /* NS-Elem-1 */ = {
 			isa = PBXGroup;
 			children = (
-				6D5D5F7121B44303007F5184 /* Model */,
+				6D50B72221E8E39E009821F7 /* Model */,
 				6D5D5F6F21B43138007F5184 /* Controller */,
 				6D5D5F7021B4314C007F5184 /* View */,
 				6D5D5F6921B426E7007F5184 /* Info.plist */,
@@ -81,20 +94,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		6D5D5F7121B44303007F5184 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6D5D5F5921B426E6007F5184 /* nsel-00000div000 */ = {
+		6D5D5F5921B426E6007F5184 /* nsel-Perc2Dec */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6D5D5F6C21B426E7007F5184 /* Build configuration list for PBXNativeTarget "nsel-00000div000" */;
+			buildConfigurationList = 6D5D5F6C21B426E7007F5184 /* Build configuration list for PBXNativeTarget "nsel-Perc2Dec" */;
 			buildPhases = (
 				6D5D5F5621B426E6007F5184 /* Sources */,
 				6D5D5F5721B426E6007F5184 /* Frameworks */,
@@ -104,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = "nsel-00000div000";
+			name = "nsel-Perc2Dec";
 			productName = "NS-Elem-1";
-			productReference = 6D5D5F5A21B426E6007F5184 /* nsel-00000div000.app */;
+			productReference = 6D5D5F5A21B426E6007F5184 /* nsel-Perc2Dec.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6D5D5F5521B426E6007F5184 /* Build configuration list for PBXProject "nsel-00000div000" */;
+			buildConfigurationList = 6D5D5F5521B426E6007F5184 /* Build configuration list for PBXProject "nsel-Perc2Dec" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6D5D5F5921B426E6007F5184 /* nsel-00000div000 */,
+				6D5D5F5921B426E6007F5184 /* nsel-Perc2Dec */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D50B72421E8E439009821F7 /* Question.swift in Sources */,
+				6D50B72621E8E4D7009821F7 /* QuestionList.swift in Sources */,
 				6D5D5F6021B426E6007F5184 /* ViewController.swift in Sources */,
 				6D5D5F5E21B426E6007F5184 /* AppDelegate.swift in Sources */,
 			);
@@ -314,7 +321,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eands9.nsel-00000div000";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eands9.nsel-Perc2Dec";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,7 +339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eands9.nsel-00000div000";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eands9.nsel-Perc2Dec";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6D5D5F5521B426E6007F5184 /* Build configuration list for PBXProject "nsel-00000div000" */ = {
+		6D5D5F5521B426E6007F5184 /* Build configuration list for PBXProject "nsel-Perc2Dec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D5D5F6A21B426E7007F5184 /* Debug */,
@@ -351,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D5D5F6C21B426E7007F5184 /* Build configuration list for PBXNativeTarget "nsel-00000div000" */ = {
+		6D5D5F6C21B426E7007F5184 /* Build configuration list for PBXNativeTarget "nsel-Perc2Dec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6D5D5F6D21B426E7007F5184 /* Debug */,
